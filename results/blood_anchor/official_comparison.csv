@@ -1,0 +1,5 @@
+regime,baseline,extended,n,MAE_gain,CI_low,CI_high,uncertainty
+unadapted,official_MCP8,locked8,74,0.3304188040856453,-0.5323435814921648,1.1966960273860323,fixed20_calibration
+intercept,official_MCP8,locked8,74,0.7929490690116074,0.08664669995287322,1.5263680793335768,fixed20_calibration
+affine,official_MCP8,locked8,74,1.0300413892161848,0.12851463813194564,2.0076510135260697,fixed20_calibration
+intercept,official_MCP8,locked8,74,0.7929490690116074,-0.03203370575638713,1.6087342757207173,resample_calibration20_and_evaluation74

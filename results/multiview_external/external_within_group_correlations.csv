@@ -1,0 +1,9 @@
+target,region,group,n_donors,spearman
+Tau_panel,EC,Control,6,0.6
+Tau_panel,EC,AD,6,0.3142857142857143
+Tau_panel,SSC,Control,6,0.2
+Tau_panel,SSC,AD,6,0.8857142857142858
+Tau_DFC,EC,Control,6,0.2571428571428572
+Tau_DFC,EC,AD,6,0.3142857142857143
+Tau_DFC,SSC,Control,6,-0.14285714285714288
+Tau_DFC,SSC,AD,6,0.8857142857142858

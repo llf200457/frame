@@ -1,0 +1,11 @@
+{
+  "python_sources_parsed": 76,
+  "historical_analysis_sources": 73,
+  "aggregate_result_files": 42,
+  "protected_models_byte_identical": true,
+  "row_level_records_included": false,
+  "raw_data_included": false,
+  "full_retraining_executed": false,
+  "uploaded_to_GitHub": false,
+  "clean_environment_install_tested": false
+}

@@ -1,0 +1,4 @@
+# Only needed for selected historical stage-22 sensitivity analyses.
+# These versions were not verified in the current core environment.
+statsmodels
+neuroCombat

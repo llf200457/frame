@@ -1,0 +1,14 @@
+{
+  "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:58) [MSC v.1929 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "h5py": "3.16.0"
+  },
+  "thread_counts": 1,
+  "scope": "Dependencies for this follow-up; earlier stage39/37 input preparation remains in the workspace. Raw count archives are retained in stage41/raw; not duplicated into manuscript source_data."
+}

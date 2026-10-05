@@ -1,0 +1,9 @@
+cohort,target_coverage,baseline,candidate,brier_gain,CI_low,CI_high,conditional_stratified_bootstrap_n
+GSE63061,0.8,original_module_drift,measurement_anchored_residual_distance,-2.0358028600231393e-05,-0.018313662600468662,0.022884936849807944,2000
+GSE63061,0.8,frozen_prediction_uncertainty,measurement_anchored_residual_distance,-0.07183758361934972,-0.10826431822795513,-0.02591458570975507,2000
+GSE63061,0.6,original_module_drift,measurement_anchored_residual_distance,-0.012055428742838048,-0.036539678263961546,0.02475468808890856,2000
+GSE63061,0.6,frozen_prediction_uncertainty,measurement_anchored_residual_distance,-0.17569866888026908,-0.23696177373636665,-0.10113097736981744,2000
+GSE140829,0.8,original_module_drift,measurement_anchored_residual_distance,-0.005155918996391895,-0.013858945266751629,0.010084043676740598,2000
+GSE140829,0.8,frozen_prediction_uncertainty,measurement_anchored_residual_distance,0.023909940056209666,-0.0014870481612108395,0.04921683560492481,2000
+GSE140829,0.6,original_module_drift,measurement_anchored_residual_distance,-0.011624591799282213,-0.030286537801003863,0.007355348097010416,2000
+GSE140829,0.6,frozen_prediction_uncertainty,measurement_anchored_residual_distance,0.0497178066858448,0.00025203307600738894,0.09394584278467545,2000

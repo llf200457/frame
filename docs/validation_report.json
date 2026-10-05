@@ -1,0 +1,80 @@
+{
+  "aggregate_integrity_audit": {
+    "passed": true,
+    "files_hashed": 202,
+    "protected_models": 3,
+    "saved_value_matches": 18,
+    "raw_patient_metrics_recomputed": false,
+    "bootstrap_intervals_recomputed": false,
+    "model_training_executed": false
+  },
+  "locally_held_prediction_replay": {
+    "passed": true,
+    "point_metrics_recomputed": 18,
+    "factor_metrics": {
+      "source_OOF": {
+        "R2": 0.5799101185799815,
+        "MAE": 6.8749169358843085,
+        "bias": 0.2248426285681863,
+        "rho": 0.7922897701418592
+      },
+      "external_raw": {
+        "R2": -0.1204549840397211,
+        "MAE": 7.576279666905654,
+        "bias": -6.329672374561764,
+        "rho": 0.7150209194430269
+      },
+      "external_offset": {
+        "R2": 0.4658033502961286,
+        "MAE": 4.7429642424292835,
+        "bias": 0.4411022523676595,
+        "rho": 0.7150209194430269
+      },
+      "official_offset": {
+        "R2": 0.312325981321123,
+        "MAE": 5.535913311440892,
+        "bias": 0.6005237732618759,
+        "rho": 0.5520085901077039
+      }
+    },
+    "AUC": {
+      "GSE63061": 0.776763663695909,
+      "GSE140829": 0.5651713642980019,
+      "GSE249477": 0.4988662131519274,
+      "GSE248417": 0.721366097459392
+    },
+    "bootstrap_intervals_recomputed": false,
+    "training_executed": false
+  },
+  "frozen_scorer_replay": {
+    "passed": true,
+    "actual_primary_participants": 94,
+    "heldout_participants": 74,
+    "max_absolute_prediction_errors": {
+      "raw": 7.105427357601002e-15,
+      "intercept": 1.4210854715202004e-14
+    },
+    "input_gene_coverage": {
+      "model_genes": 4713,
+      "available_genes": 4705,
+      "missing_genes": 8,
+      "samples": 94,
+      "offset": 6.838912278411809,
+      "retrained": false,
+      "target_gene_rescaling": false
+    },
+    "test_data_copied_to_public_repository": false
+  },
+  "download_registry_rows_listed": 35,
+  "actual_network_downloads_in_packaging_round": 0,
+  "sensitive_content_checks": {
+    "absolute_machine_paths": [],
+    "credential_pattern_matches": [],
+    "participant_column_matches_in_results": [],
+    "files_at_or_above_browser_limit": [],
+    "raw_archives_or_patient_record_files_bundled": false
+  },
+  "full_retraining_executed": false,
+  "clean_dependency_install_tested": false,
+  "published_to_GitHub": false
+}

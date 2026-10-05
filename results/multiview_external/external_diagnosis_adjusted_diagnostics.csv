@@ -1,0 +1,5 @@
+target,region,n_donors,diagnosis_adjusted_rank_correlation,within_diagnosis_permutation_p,bh_q
+Tau_panel,EC,12,0.39767797685986106,0.214,0.2862
+Tau_panel,SSC,12,0.5731551162907965,0.0736,0.2862
+Tau_DFC,EC,12,0.3190929599466159,0.32705,0.32705
+Tau_DFC,SSC,12,0.4187894642712676,0.21465,0.2862
