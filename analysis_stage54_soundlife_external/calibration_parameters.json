@@ -1,0 +1,29 @@
+{
+  "calibration_subject_n": 20,
+  "heldout_subject_n": 74,
+  "intercept_delta": 6.838912278411809,
+  "affine_intercept": -1.7538414269208857,
+  "affine_slope": 1.170369156163846,
+  "target_calibration_mean": 57.275,
+  "source_mean": 76.272,
+  "calibration_predictor_input": "one locked source prediction only",
+  "target_gene_scaling": false,
+  "source_age_sex": {
+    "mean": [
+      61.512,
+      0.584,
+      0.008
+    ],
+    "scale": [
+      16.24690296641178,
+      0.49289349762397955,
+      0.08908422980528033
+    ],
+    "coef": [
+      2.8657339605581487,
+      1.4082048451187554,
+      -1.6125974273388297
+    ],
+    "intercept": 76.272
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-03",
+  "status": "Finite retrospective benchmark fixed before new baseline fitting and scoring; Sound Life outcomes were previously inspected",
+  "design_dependency": "analysis_stage55_measurement_anchored_triage/next_round_benchmark_design.json",
+  "question": "Does the original eight-module representation improve measured-neutrophil prediction over fixed immune-marker means with identical source training and target calibration budgets?",
+  "target": "Measured CBC neutrophils percent; errors in percentage points",
+  "source": "The same 125 exactly paired GSE157103 hospital records used in stage53; not an AD or healthy-control cohort",
+  "models": ["locked8", "marker7", "age_sex"],
+  "locked8": "Unmodified stage53 age/sex + eight signed-module source model",
+  "marker7": "Age/male/sex_missing plus seven fixed means of log2(TPM+1) across the 61 stage53 immune marker genes; a marker-based ridge baseline, not the full MCP-counter implementation",
+  "age_sex": "Age/male/sex_missing only",
+  "ridge_alpha": 10.0,
+  "source_preprocessing": "StandardScaler fit on the same source125 only; no target feature scaling; locked8 gene standardization and missing-gene treatment unchanged",
+  "metadata_only_marker_availability_audit": {"source_available": 61, "target_available": 61, "missing": [], "gene_replacement": false},
+  "target_expression": "All 58302 GRCh38.91 gene counts divided by exact saved exon-union lengths, with all-gene denominator, then TPM; extract fixed 61 marker genes for the same94 primary visits",
+  "primary_external_roles": "Unmodified stage54 earliest eligible visit per subject: 20 fixed calibration subjects and 74 subject-disjoint evaluation subjects",
+  "calibration_regimes": ["unadapted", "intercept", "affine"],
+  "calibration_rules": "Each source model first clipped to [0,100]; intercept is mean(y-p) in identical20; affine is OLS y=a+b*p in identical20; calibrated outputs clipped to [0,100]",
+  "constant_comparator": "Mean of the same20 calibration outcomes",
+  "primary_comparison": "74-subject MAE gain of locked8 over marker7 under matched intercept-only calibration: mean(abs(y-marker7)-abs(y-locked8))",
+  "primary_success_rule": "Primary paired participant-bootstrap 95% CI for MAE gain lies entirely above zero; this would support superiority only for this retrospective cohort and budget",
+  "secondary": "All three regimes for all models; R2, MAE, RMSE, Spearman, bias; matched age/sex comparisons and age strata <45 versus >=45 are descriptive",
+  "bootstrap": {"seed": 20261059, "draws": 2000, "unit": "one independent subject per primary visit", "shared_draws_for_all_models": true, "interval": "percentile 95%", "conditional_on": "fixed source fit and fixed20 calibration subjects; does not include calibration-group selection uncertainty"},
+  "no_adaptive_search": ["No new feature lists", "No alpha tuning", "No seed or calibration-group search", "No outcome-based exclusions", "No combined8+7 or nonlinear rescue models"],
+  "stop_rule": "If marker baseline equals or outperforms locked8, report the result and prioritize a genuinely new measured external resource",
+  "preserve_files": {
+    "modules/frozen_pca_modules.csv": "45c28b8b10035c6391cf5b144c7b410fc9020c76488f6e0cb8de721f61a83166",
+    "metadata/stage22/primary_classifier_parameters.json": "25d4178a66b7d56c13d99b7382dacd1ff401cb65efb658a5c6e0d5ad116b84c5",
+    "overleaf_upload_route2_v7/main.tex": "55c221ce2977232f381307253e65ef1f5ef324231dd49cb7f762edb69f1aa0d3",
+    "analysis_stage53_measured_blood_anchor/locked_neutrophil_factor_predictor.npz": "1cf23a1a82e1adb4fef00fa6b56d1bef52cf2bd11c6847f7c4bebc33a9ecc424"
+  },
+  "claim_boundaries": ["Not a new untouched test cohort", "Not validated AD diagnosis or AD triage improvement", "No measured CBC prediction claim on AD microarrays", "No full MCP-counter benchmark claim", "No general algorithm novelty or superiority from one comparison"]
+}

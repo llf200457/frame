@@ -1,0 +1,37 @@
+{
+  "training_n": 125,
+  "target": "measured neutrophil percent",
+  "feature_names": [
+    "age",
+    "male",
+    "sex_missing",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08"
+  ],
+  "coefficients": [
+    0.6650694745596877,
+    0.07552154769617955,
+    0.0002569450977737006,
+    0.10267979082669705,
+    6.677714999619326,
+    -4.3380089790810885,
+    0.4084387697970213,
+    -1.7170725366412063,
+    0.08993569500485933,
+    0.0446348046796165,
+    -1.7564763056741248
+  ],
+  "intercept": 76.272,
+  "alpha": 10.0,
+  "model_file": "locked_neutrophil_factor_predictor.npz",
+  "model_sha256": "1cf23a1a82e1adb4fef00fa6b56d1bef52cf2bd11c6847f7c4bebc33a9ecc424",
+  "independent_validation": false,
+  "measured_protein_inputs": false,
+  "original_AD_classifier_changed": false
+}

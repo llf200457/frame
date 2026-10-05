@@ -1,0 +1,13 @@
+{
+  "purpose": "Freeze a reusable measured-CBC factor predictor for future untouched independent cohort evaluation",
+  "created_after": "All stage53 exploratory nested-CV and within-study background-holdout results",
+  "training_samples": "All 125 exact-ID paired samples",
+  "target": "Neutrophils_percent",
+  "features": "Age, male, missing-sex indicator and original frozen8 module signed means",
+  "alpha": 10.0,
+  "alpha_rationale": "Use the alpha10 fixed comparator already prescribed in the initial permutation protocol; do not search additional alphas or score on training data",
+  "preprocessing": "log2(TPM+1), saved 125-training-sample gene mean/SD, original module signs and denominators, saved feature mean/SD",
+  "missing_genes_in_future": "Use training gene means, hence z=0; report gene coverage and reject claims of equivalent assay performance without a prespecified coverage audit",
+  "future_target_labels": "Cannot enter normalization, predictor coefficients or feature selection",
+  "status": "research-only, no clinical deployment, no independent cohort validation yet"
+}

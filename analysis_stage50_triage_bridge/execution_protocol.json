@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-02",
+  "amendment_reason": "User requires explicit connection to the original blood triage framework, not only the later brain tau manuscript.",
+  "original_framework": "Frozen eight blood-expression modules, clinical AD versus control endpoint, cohort shift, probability calibration and defer/review decisions",
+  "primary_blood_genes_and_classifier_remain_frozen": true,
+  "primary_blood_modules_for_molecular_bridge": ["M01", "M07"],
+  "brain_tau_panel_role": "orthogonal tissue context; not a substitute primary clinical blood outcome",
+  "protein_primary_candidate": "donor-level mean of log1p H3-normalized measured microglial nuclear NF-kappaB",
+  "all_microglia_primary_DAM_secondary": true,
+  "minimum_qualified_microglia_per_donor": 20,
+  "H3_cell_quality_gate": "H3 ADT greater than 1, following author technical gate; protein nonmissing, inCITE preparation only",
+  "protein_feature_learning_must_be_donor_partitioned": true,
+  "aliquot_qc_amendment_before_model_results": "Identical bank/region/age/sex/disease with repeated aliquots: keep one donor, nucleus-weight RIN/PMI covariates and retain source ranges; do not split the person. Identity conflicts stop analysis.",
+  "no_direct_application_of_microglia_protein_predictor_to_whole_blood": true,
+  "no_individual_blood_to_brain_prediction_without_matched_validation": true,
+  "immune_extension": {
+    "method": "MCP-counter relative marker abundance, using markers common to the three chip cohorts",
+    "cohorts": ["GSE63060", "GSE63061", "GSE140829"],
+    "primary_questions": [
+      "Are M01/M07 associations with monocytic and neutrophil scores retained after removing overlapping signature genes?",
+      "Are frozen-classifier errors and deferral enriched at discovery-defined immune-score extremes in external cohorts?"
+    ],
+    "already_completed_analyses_not_repeated_as_novel": ["discovery/external all-module MCP-counter correlations", "neutrophil residual classifier"],
+    "blood_relative_scores_are_not_cell_fractions_or_brain_infiltration": true,
+    "extreme_cutoffs": "two-sided discovery 5th/95th percentiles; trained reference only",
+    "error_enrichment_gate_types": ["Monocytic lineage", "Neutrophils"],
+    "marker_coverage_amendment_before_results": "Groups with fewer than two markers common to all three chip cohorts are not scored; retain their coverage failures; error gate uses only the two prespecified myeloid groups.",
+    "statistical_family": "BH over prespecified M01/M07 x monocytic/neutrophil x three-cohort partial association tests; error enrichment tests separately Holm corrected",
+    "association_adjustment": "diagnosis, age and recorded sex when identifiable; no external classifier refit",
+    "mask_rule": "remove all eight immune marker genes from frozen modules but retain original module denominator; unchanged classifier is a sensitivity mapping, not a replacement model"
+  },
+  "genetic_extension": {
+    "candidate_genes": ["SRSF3", "SRSF6", "SF3A2", "SRP14", "SRP54", "SRPRA", "SEC61A1", "RELA", "NFKB1", "NFKBIA", "TNFAIP3", "LGALS3"],
+    "selection_uses_existing_module_interpretation_not_GWAS_pvalues": true,
+    "gate": "usable public cis-eQTL/pQTL, matched alleles/build/ancestry, strength and sample-overlap audit, locus-wide colocalization, LD-aware inference",
+    "expression_QTL_does_not_instrument_nuclear_NFkB_protein": true,
+    "genetic_AD_association_does_not_validate_blood_triage_accuracy": true,
+    "run_only_after_instrument_and_endpoint_checks": true
+  },
+  "virtual_knockout_extension": {
+    "role": "secondary regulatory-network hypothesis testing on donor-balanced microglial nuclei",
+    "preferred_targets": ["RELA", "NFKB1", "NFKBIA"],
+    "priority_requires_link_to_real_protein_prediction_and_frozen_blood_module_genes": true,
+    "compare": ["scTenifoldKnk network perturbation", "degree/expression-matched control genes", "simple direct-feature ablation"],
+    "fixed_proposed_resampling_seeds": [20261002, 20261003, 20261004],
+    "evaluation": "direction and stability of changes to prespecified M01/M07-related genes and protein-predictor features; experimental perturbation benchmark if matching data exist",
+    "zeroing_classifier_features_is_not_biological_knockout": true,
+    "simulation_does_not_establish_in_vivo_causality_or_treatment_efficacy": true
+  },
+  "finite_first_round": "real paired-data extraction plus original-triage immune error audit; instrument-access audit before MR and network simulation",
+  "bootstrap_seed": 20261002,
+  "bootstrap_n": 1000,
+  "manuscript_edit_requires_completed_results": true,
+  "reference_count_target": [30, 40],
+  "new_clinical_model_success_not_assumed": true
+}

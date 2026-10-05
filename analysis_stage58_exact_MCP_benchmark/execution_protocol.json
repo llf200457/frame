@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-03",
+  "status": "Finite follow-up benchmark fixed after stage57 signature availability audit, before fitting/scoring this new baseline; Sound Life is previously inspected",
+  "question": "Does the original8-module predictor retain an advantage against an officially implemented immune-score representation under matched source/calibration budgets?",
+  "official_implementation": "Unmodified pinned MCPcounter 1.2.0 R source; commit b6eac73e91c246fcff0bb1a5c68a816cd588fc48; actual R execution, no Python substitute claimed as a package run",
+  "input_scale": "log2(TPM+1); official estimator itself summarizes provided expression rather than internally converting to proportions",
+  "gene_support": "Restrict both source and target inputs to identical metadata-audited gene intersection; original official signatures retained; all10 scores exported, no manually curated marker replacements",
+  "primary_baseline": "Ridge age/male/sex_missing plus all8 official immune populations: T cells, CD8 T cells, Cytotoxic lymphocytes, NK cells, B lineage, Monocytic lineage, Myeloid dendritic cells, Neutrophils",
+  "excluded_from_predictive_model": "Endothelial and Fibroblast scores are exported for implementation audit but excluded a priori because the task is blood immune fractions; no comparison of8 versus10 models will be used to select a winner",
+  "source_training": "Same125 measured-CBC records; source-only StandardScaler; ridge alpha10; freeze parameters before target scoring",
+  "comparison": "Unmodified locked8 and stage56 fixed7-marker baseline; same94 primary visits, fixed20 calibration subjects and74 evaluation subjects",
+  "calibration": "Unadapted, offset-only and affine, each with same20 labels; clip source and final predictions to[0,100]; no subject exclusions or calibration-group search",
+  "primary_contrast": "MAE gain of locked8 over official_MCP8 under offset-only calibration",
+  "primary_uncertainty": "Use shared stage56 calibration20 + evaluation74 bootstrap draws (2000); refit scalar offsets only, conditional on fixed source models. Fixed-calibration evaluation-only intervals additionally reported",
+  "secondary": "All regime metrics and official scores vs prior means; descriptive, no general algorithm-superiority claim",
+  "no_model_search": ["No alpha tuning", "No nonlinear model", "No new source data merged", "No feature selection from target labels", "No exact age imputation or new labels used on the138-resource yet"],
+  "preserve_files": {
+    "modules/frozen_pca_modules.csv": "45c28b8b10035c6391cf5b144c7b410fc9020c76488f6e0cb8de721f61a83166",
+    "metadata/stage22/primary_classifier_parameters.json": "25d4178a66b7d56c13d99b7382dacd1ff401cb65efb658a5c6e0d5ad116b84c5",
+    "overleaf_upload_route2_v7/main.tex": "55c221ce2977232f381307253e65ef1f5ef324231dd49cb7f762edb69f1aa0d3",
+    "analysis_stage53_measured_blood_anchor/locked_neutrophil_factor_predictor.npz": "1cf23a1a82e1adb4fef00fa6b56d1bef52cf2bd11c6847f7c4bebc33a9ecc424"
+  }
+}
